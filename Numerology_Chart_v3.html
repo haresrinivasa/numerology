@@ -1,0 +1,259 @@
+
+<html>
+<head>
+<title>Numerology Chart</title>
+<style>
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 4px 3px #666666;
+  -moz-box-shadow: 3px 4px 3px #666666;
+  box-shadow: 3px 4px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.box_style {   
+	background: white; 
+    border: 1px double #DDD; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px #333; 
+    color: #666; 
+    outline: none; 
+    height:50px; 
+    width: 375px; color: #000000; font-family: "Georgia"; 
+	font-size: 30px; font-weight: normal;
+}
+.box_style:focus {
+    border: 1px solid #07c;
+    box-shadow: 0 0 10px #07c;
+}
+.output_style {
+	color: #000000; font-family: "Georgia"; 
+	font-size: 40px; font-weight: normal;
+}
+.text_style {
+	color: #000000; font-family: "Georgia"; 
+	font-size: 50px; font-weight: normal;
+	margin: 10px 0px 20px; 
+	text-shadow: 2px 1px 2px #082b34;
+}
+.body_style {
+	color: #000000; font-family: "Georgia"; 
+	font-size: 20px; font-weight: normal;
+	margin: auto;
+	margin-top: 20px;
+    margin-left: 400px; }
+}
+
+
+table.hovertable {
+  font-family: verdana,arial,sans-serif;
+  font-size:10px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #999999;
+  border-collapse: collapse;
+}
+table.hovertable th {
+  background-color:#c3dde0;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #a9c6c9;
+}
+table.hovertable tr {
+  background-color:#d4e3e5;
+}
+table.hovertable td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #a9c6c9;
+}
+
+
+</style>
+<script type="text/javascript">
+function luckyNumber() {
+  var sum = 0;  var char = '';
+  //window.alert("Im here");
+  //document.write("Hello");
+  //document.getElementById('EntryName').innerHTML= 5 + 5;
+  var strArray = document.getElementById('EntryName').value.split('');
+  //window.alert(strArray);
+  for (var i=0; i<strArray.length; i++) 
+  	{ char = strArray[i].toLowerCase(); 
+  	//alert(char);
+  	switch(char){
+  		case 'a':
+  		case 'i':
+  		case 'j':
+  		case 'q':
+  		case 'y':
+  			sum = sum + 1;
+  			break;
+
+  		case 'b':
+  		case 'k':
+  		case 'r':
+  			sum = sum + 2;
+  			break;
+
+  		case 'c':
+  		case 'g':
+  		case 'l':
+  		case 's':
+  			sum = sum + 3;
+  			break;
+
+  		case 'd':
+  		case 'm':
+  		case 't':
+  			sum = sum + 4;
+  			break;
+
+  		case 'e':
+  		case 'h':
+  		case 'n':
+  		case 'x':
+  			sum = sum + 5;
+  			break;
+
+  		case 'u':
+  		case 'v':
+  		case 'w':
+  			sum = sum + 6;
+  			break;
+
+  		case 'o':
+  		case 'z':
+  			sum = sum + 7;
+  			break;
+
+  		case 'f':
+  		case 'p':
+  			sum = sum + 8;
+  			break;
+
+  	}
+
+}//for loop ends
+//document.write('Number: '+sum);
+//document.getElementById("outputDiv").innerHTML = "<br>";
+//document.getElementById("outputDiv").innerHTML = "<table><tr><td>Name Value</td></tr></table>";
+//window.alert('Number: '+sum);
+//AddToStack(sum);
+//var stack = document.getElementById('outputDiv');
+document.getElementById('outputDiv').innerHTML = '<br>' + document.getElementById('EntryName').value;
+document.getElementById('outputDiv1').innerHTML = sum;
+//var x = document.createElement("div");  // Creates a new <div> node
+//x.textContent = sum;         // Sets the text content
+//document.body.appendChild(x);  
+}//function ends
+//            var userInput = document.getElementById('EntryName');
+  //          var stack = document.getElementById('outputDiv');
+   //         stack.innerHTML = document.getElementById('EntryName').value + '';
+     //       stack.innerHTML = sum;
+       //     //clear input an refocus:
+         //   userInput.value = '';
+           // userInput.focus();11
+
+</script>
+</head>
+<body class="body_style"> 
+  <table class="hovertable"> 
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#E37B7B';" style="font-size: 25px" "font-weight: 20pt">
+    <td> 1</td>
+    <td> 2</td>
+    <td> 3</td>
+    <td> 4</td>
+    <td> 5</td>
+    <td> 6</td>
+    <td> 7</td>
+    <td> 8</td>
+    </b></tr>
+
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    <td> A</td>
+    <td> B</td>
+    <td> C</td>
+    <td> D</td>
+    <td> E</td>
+    <td> U</td>
+    <td> O</td>
+    <td> F</td>
+    </tr>
+
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    <td> I</td>
+    <td> K</td>
+    <td> G</td>
+    <td> M</td>
+    <td> H</td>
+    <td> V</td>
+    <td> Z</td>
+    <td> P</td>
+    </tr>
+
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    <td> J</td>
+    <td> R</td>
+    <td> L</td>
+    <td> T</td>
+    <td> N</td>
+    <td> W</td>
+    <td> </td>
+    <td> </td>
+    </tr>
+
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    <td> Q</td>
+    <td> </td>
+    <td> S</td>
+    <td> </td>
+    <td> X</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+    
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    <td> Y</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>
+    </table>
+	<div class="text_style"> Enter Name</div>
+	<input type="text" id="EntryName" class="box_style" onKeydown="Javascript: if(event.keyCode==13) luckyNumber();"> &nbsp;
+	<button value="luckyNumber()" onclick="luckyNumber()" class="btn">Calculate</button>
+	<div id="outputDiv" class="output_style" ></div>
+	<div id="outputDiv1" class="output_style"></div>
+
+</body>
+</html>
+
